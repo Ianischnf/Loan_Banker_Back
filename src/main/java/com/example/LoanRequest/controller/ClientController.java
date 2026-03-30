@@ -14,6 +14,7 @@ public class ClientController {
     private ClientService clientService;
 
     public ClientController(ClientService clientService){
+
         this.clientService = clientService;
     }
 
@@ -33,8 +34,8 @@ public class ClientController {
     }
 
     @DeleteMapping("/{id}")
-    public Client DeleteClient(@PathVariable("id") Long clientId){
-        return this.DeleteClient(clientId);
+    public void DeleteClient(@PathVariable("id") Long clientId){
+        this.clientService.DeleteClient(clientId);
     }
 
 }

@@ -20,7 +20,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public Client CreateClient(Client client) {
-
+        System.out.println("Client : " + client.getFirstName());
         return this.clientRepository.save(client);
     }
 
@@ -28,6 +28,7 @@ public class ClientServiceImpl implements ClientService {
     public List<Client> FetchAllClient() {
         return (List<Client>)
                 clientRepository.findAll();
+
     }
 
     @Override

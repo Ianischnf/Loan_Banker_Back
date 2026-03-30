@@ -14,17 +14,17 @@ public class Client {
     private Long clientId;
 
 
-    @Column( name = "FirstName")
-    private String FirstName;
+    @Column( name = "firstname")
+    private String firstName;
 
-    @Column( name = "LastName")
-    private String LastName;
+    @Column( name = "lastname")
+    private String lastName;
 
     @Column( name = "email")
-    private String Email;
+    private String email;
 
     @Column( name = "password")
-    private String Password;
+    private String password;
 
     @Enumerated(EnumType.STRING)
     private Roles roles = Roles.CLIENT;
@@ -34,10 +34,10 @@ public class Client {
 
     public Client(String FirstName, String LastName, String Email, String Password, Roles roles){
 
-        this.FirstName = FirstName;
-        this.LastName = LastName;
-        this.Email = Email;
-        this.Password = Password;
+        this.firstName = FirstName;
+        this.lastName = LastName;
+        this.email = Email;
+        this.password = Password;
         this.roles =  roles;
 
     }
@@ -45,10 +45,10 @@ public class Client {
     public Client(Long ClientId, String FirstName, String LastName, String Email, String Password, Roles roles){
 
         this.clientId = ClientId;
-        this.FirstName = FirstName;
-        this.LastName = LastName;
-        this.Email = Email;
-        this.Password = Password;
+        this.firstName = FirstName;
+        this.lastName = LastName;
+        this.email = Email;
+        this.password = Password;
         this.roles =  roles;
 
     }
@@ -63,35 +63,31 @@ public class Client {
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
-
-    public void setFirstName(String firstName) {
-        FirstName = firstName;
+    public void setFirstName(String firstname) {
+        this.firstName = firstname;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
-
-    public void setLastName(String lastName) {
-        LastName = lastName;
+    public void setLastName(String lastname) {
+        this.lastName = lastname;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
-
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
-
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 
     public Roles getRoles() {
